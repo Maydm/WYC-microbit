@@ -1,0 +1,11 @@
+let reading = 0
+basic.forever(function () {
+    reading = input.lightLevel()
+    led.plotBarGraph(
+    0,
+    0
+    )
+    if (input.buttonIsPressed(Button.A)) {
+        basic.showNumber(reading)
+    }
+})
