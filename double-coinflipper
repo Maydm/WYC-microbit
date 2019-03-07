@@ -1,0 +1,34 @@
+let CoinBHeads = false
+let PlayerBScore = 0
+let PlayerAScore = 0
+let CoinAHeads = false
+input.onButtonPressed(Button.B, function () {
+    basic.showString("A:")
+    basic.showString("" + PlayerAScore)
+    basic.pause(200)
+    basic.clearScreen()
+    basic.showString("B:")
+    basic.showString("" + PlayerBScore)
+    basic.pause(200)
+})
+input.onButtonPressed(Button.A, function () {
+    CoinAHeads = Math.randomBoolean()
+    if (CoinAHeads) {
+        basic.showString("A: H")
+    } else {
+        basic.showString("A: T")
+    }
+    CoinBHeads = Math.randomBoolean()
+    if (CoinBHeads) {
+        basic.showString("B: H")
+    } else {
+        basic.showString("B: T")
+    }
+    if (CoinAHeads == CoinBHeads) {
+        PlayerAScore += 1
+    } else {
+        PlayerBScore += 1
+    }
+})
+PlayerAScore = 0
+PlayerBScore = 0
