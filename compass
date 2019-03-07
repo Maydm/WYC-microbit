@@ -1,0 +1,11 @@
+basic.forever(() => {
+    if (input.compassHeading() >= 340 || input.compassHeading() <= 20) {
+        basic.showString("N")
+    } else if (input.compassHeading() >= 70 && input.compassHeading() <= 110) {
+        basic.showString("E")
+    } else if (input.compassHeading() >= 160 && input.compassHeading() <= 160) {
+        basic.showString("S")
+    } else if (input.compassHeading() >= 250 && input.compassHeading() <= 290) {
+        basic.showString("W")
+    }
+})
